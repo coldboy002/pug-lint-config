@@ -1,0 +1,12 @@
+//- Invalid
+a(href='text #{title}') Link
+//- Valid
+a(href='text \#{title}') Link
+a(href='text \\#{title}') Link
+
+//- Invalid
+<strong>html text</strong>
+p this is <strong>html</strong> text
+//- Valid
+strong html text
+p this is #[strong html] text
