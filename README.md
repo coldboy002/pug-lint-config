@@ -8,11 +8,15 @@
 
 The peer dependencies [pug-lint](https://www.npmjs.com/package/pug-lint) must be installed alongside this package.
 
+npm
+
 ```bash
 npm install -D @coldboy002/pug-lint-config
 ```
 
 or
+
+yarn:
 
 ```bash
 yarn add -D @coldboy002/pug-lint-config
