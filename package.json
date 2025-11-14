@@ -22,7 +22,8 @@
   "scripts": {
     "lint:fix": "eslint *.js --fix",
     "lint:js": "eslint *.js",
-    "lint:package": "prettier package.json --write "
+    "lint:package": "prettier package.json --write ",
+    "test": "pug-lint examples/test.pug"
   },
   "prettier": "@coldboy002/prettier-config",
   "devDependencies": {
