@@ -8,16 +8,14 @@
 
 The peer dependencies [pug-lint](https://www.npmjs.com/package/pug-lint) must be installed alongside this package.
 
-> install with npm:
-
 ```bash
-npm install -D @coldboy002/pug-lint-config pug-lint
+npm install -D @coldboy002/pug-lint-config
 ```
 
-> install with yarn:
+or
 
 ```bash
-yarn add -D @coldboy002/pug-lint-config pug-lint
+yarn add -D @coldboy002/pug-lint-config
 ```
 
 ## Usage
@@ -48,17 +46,29 @@ module.exports = {
 };
 ```
 
-Check out [this page](https://github.com/pugjs/pug-lint#extends) for more details about configuring pug-lint.
+### Extending the config
 
-## Scripts
+You can specify additional rules and override or turn off already set ones.
 
-Add a script to your `package.json` file:
+For example, to change the `validateIndentation` rule to specify a different indentation, turn off the `requireStrictEqualityOperators` rule and add the `validateDivTags` rule:
 
 ```json
-"scripts": {
-  "lint:pug": "glob-exec \"./**/*.pug\" -- \"pug-lint {{files.join(' ')}}\"",
+{
+  "extends": "@coldboy002/pug-lint-config",
+  "requireStrictEqualityOperators": null,
+  "validateDivTags": true,
+  "validateIndentation": 4
 }
 ```
+
+Check out [this page](https://github.com/pugjs/pug-lint#extends) for more details about configuring pug-lint.
+
+## Integration with VS Code
+
+1. Install the pug-lint [extension](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-puglint) for VS Code.
+2. Enable the linter in VS Code [settings](https://code.visualstudio.com/docs/getstarted/settings).
+3. Install `pug-lint` and this config in your project following the [Installation](#installation) section.
+4. Add a pug-lint configuration file (`.pug-lintrc.*`) and extend it with this shareable config following the [Usage](#usage) section.
 
 ## FAQ
 

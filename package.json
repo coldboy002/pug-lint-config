@@ -3,11 +3,10 @@
   "version": "0.0.1",
   "description": "Shareable pug-lint config",
   "keywords": [
-    "pug-lint",
     "puglint",
-    "config",
-    "pug-lintconfig",
-    "puglintconfig"
+    "puglintconfig",
+    "pug-lint",
+    "pug-lint config"
   ],
   "homepage": "https://github.com/coldboy002/pug-lint-config#readme",
   "bugs": {
@@ -16,40 +15,28 @@
   "repository": "https://github.com/coldboy002/pug-lint-config.git",
   "license": "MIT",
   "author": "Vũ Trọng Thuỷ <coldboy002@gmail.com> (https://github.com/coldboy002)",
-  "main": "index.js",
+  "exports": "./index.js",
   "files": [
-    "index.js",
-    ".pug-lintrc.js",
-    "CHANGELOG.md",
-    "README.md",
-    "LICENSE",
-    "./examples"
+    "index.js"
   ],
   "scripts": {
-    "lint:fix": "eslint . --fix",
-    "lint:js": "eslint .",
-    "sortpkg": "sort-package-json",
-    "test": "glob-exec \"./**/*.pug\" -- \"pug-lint {{files.join(' ')}}\""
+    "lint:fix": "eslint *.js --fix",
+    "lint:js": "eslint *.js",
+    "lint:package": "prettier package.json --write "
   },
-  "dependencies": {
-    "glob-exec": "^0.1.1"
-  },
+  "prettier": "@coldboy002/prettier-config",
   "devDependencies": {
-    "@coldboy002/prettier-config": "^1.0.0",
-    "eslint": "^7.32.0 || ^8.2.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.8.8",
-    "pug-lint": "^2.7.0",
-    "sort-package-json": "^2.4.1"
+    "@coldboy002/prettier-config": "^1.2.0",
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0",
+    "pug-lint": "^2.7.0"
   },
   "peerDependencies": {
     "pug-lint": "^2.7.0"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=20"
   },
   "publishConfig": {
     "access": "public"
