@@ -1,6 +1,6 @@
 {
   "name": "@coldboy002/pug-lint-config",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Shareable pug-lint config",
   "keywords": [
     "puglint",
